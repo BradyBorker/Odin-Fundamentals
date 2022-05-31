@@ -10,21 +10,20 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
-  padding: 32px;
+  margin-bottom: 32px;
 }
 
 .images,
 .title {
   display: flex;
   justify-content: center;
+  gap: 52px;
 }
 
 .barberry, .chili,
 .pepper, .saffron {
-  padding: 52px;
   text-align: center;
-  flex-wrap: wrap;
-  width: 200px;
+  max-width: 200px;
 }
 
 

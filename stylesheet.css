@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #1F2937;
+    padding: 10px;
+}
+
+.logo {
+    flex: 1 0 auto;
+    color: white
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+.right-links {
+    color: gainsboro;
+}
+
+

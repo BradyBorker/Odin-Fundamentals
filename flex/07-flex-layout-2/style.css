@@ -12,7 +12,7 @@ body {
   color: white;
   font-weight: 900;
   font-size: 32px;
-  padding: 0px 0px 0px 10px;
+  padding: 0px 16px;
   display: flex;
   align-items: center;
 }
@@ -28,21 +28,25 @@ body {
 
 .body {
   display: flex;
+  flex: 1;
 }
 
 .sidebar {
   width: 300px;
   background: #4169e1;
-  flex: 1 0 auto;
+  flex-shrink: 0;
+  padding: 16px;
 }
 
 ul {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
+  padding: 0;
   margin: 0;
   gap: 8px;
+}
+
+li {
+  margin-bottom: 16px;
 }
 
 a:link,
@@ -56,14 +60,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   padding: 32px;
-  gap: 10px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  max-width: 300px;
-  min-height: 300px;
-  padding: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
 }

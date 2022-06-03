@@ -24,20 +24,16 @@ START HEADER
     font-weight: bold;
 }
 
-.header .list {
-    display: flex;
-}
-
 ul {
     display: flex;
     list-style-type: none;
-    gap: 18px;
+    gap: 20px;
     padding: 0;
     margin: 0;
 }
 
 a {
-    color: gainsboro;
+    color: #E5E7EB;
     padding: 8px;
     text-decoration: none;
     font-size: 18px;
@@ -54,9 +50,8 @@ START HERO
     justify-content: center;
     align-items: center;
     background: #1F2937;
-    padding: 10px;
     height: 300px;
-    padding: 50px;
+    padding: 75px;
 }
 
 .hero .hero-heading {
@@ -85,9 +80,9 @@ START HERO
     background-color: #3882F6;
     color: white;
     font-weight: bold;
+    text-align: center;
     padding: 10px;
     border: 0;
-    text-align: center;
     border-radius: 12px;
     width: 125px;
 }

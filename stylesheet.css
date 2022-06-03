@@ -1,29 +1,27 @@
-body,
-html {
+body {
     height: 100vh;
     margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'sans-serif';
     display: flex;
     flex-direction: column;
 }
 
-
-
 /*
-START header information
+START HEADER
 */
 .header {
     display: flex;
-    background: #1F2937;
-    padding: 10px;
     justify-content: space-around;
-    align-items: center;
-    
+    background: #1F2937;
+    padding: 20px;
 }
 
 .logo {
     display: flex;
-    color: white;
-    font-weight: 700;
+    color: #F9FAF8;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .header .list {
@@ -42,6 +40,70 @@ a {
     color: gainsboro;
     padding: 8px;
     text-decoration: none;
+    font-size: 18px;
+}
+/*
+END HEADER
+*/
+
+/* 
+START HERO
+*/
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1F2937;
+    padding: 10px;
+    height: 300px;
+    padding: 50px;
 }
 
+.hero .hero-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    width: 450px;    
+    height: 100%;
+    margin-right: 50px;
+}
+
+.hero .hero-heading h1 {
+    font-size: 48px;
+    font-weight: bolder;
+    color:#F9FAF8;
+    margin-bottom: -10px;
+}
+
+.hero .hero-heading p {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.hero .hero-heading button {
+    background-color: #3882F6;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 12px;
+    width: 125px;
+    border: 0;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    width: 500px;
+    height: 225px
+}
+/*
+END HERO
+*/
 

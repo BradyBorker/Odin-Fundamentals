@@ -144,8 +144,9 @@ START BODY-TWO
 .body-two {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
     background-color: #E5E7EB;
+    margin-top: 25px;
+
 }
 
 .quote {
@@ -187,11 +188,11 @@ START BODY-THREE
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 90px;
     background-color: #3882F6;
     border-radius: 8px;
     height: 150px;
     width: 75%;
+    margin: 90px;
 }
 
 .blue-box .text {
@@ -210,11 +211,11 @@ START BODY-THREE
     color: white;
     font-weight: bold;
     text-align: center;
-    padding: 10px;
     border: 1px solid white;
     border-radius: 12px;
     width: 125px;
     margin-left: -125px;
+    padding: 10px;
 }
 /*
 END BODY-THREE

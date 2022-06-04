@@ -146,7 +146,6 @@ START BODY-TWO
     justify-content: center;
     background-color: #E5E7EB;
     margin-top: 25px;
-
 }
 
 .quote {
@@ -186,6 +185,7 @@ START BODY-THREE
 
 .blue-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #3882F6;

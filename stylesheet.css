@@ -24,7 +24,7 @@ START HEADER
     font-weight: bold;
 }
 
-ul {
+.header ul {
     display: flex;
     list-style-type: none;
     gap: 20px;
@@ -100,3 +100,37 @@ START HERO
 END HERO
 */
 
+/*
+START BODY-ONE
+*/
+.body-one {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.body-one h1 {
+    font-weight: 900;
+}
+
+.four-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.images {
+    border: 4px solid #3882F6;
+    border-radius: 12px;
+    height: 150px;
+    width: 170px;
+}
+
+.text {
+    font-size: 18px;
+    color: rgb(112,128,144);
+    width: 175px;
+}

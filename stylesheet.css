@@ -153,12 +153,12 @@ START BODY-TWO
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    width: 690px;
-    height: 350px;
+    width: 825px;
+    height: 425px;
 }
 
 .quote .quote-text {
-    font-size: 30px;
+    font-size: 36px;
     font-style: italic;
     font-weight: lighter;
     color: rgb(112,128,144);
@@ -173,3 +173,17 @@ START BODY-TWO
 /* 
 END BODY-TWO
 */ 
+
+/*
+START BODY-THREE
+*/
+.body-three{
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+}
+
+.blue-box {
+    display: flex;
+    border: 1px solid blue;
+}

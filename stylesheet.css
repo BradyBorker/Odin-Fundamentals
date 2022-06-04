@@ -220,3 +220,19 @@ START BODY-THREE
 /*
 END BODY-THREE
 */
+
+/*
+START FOOTER
+*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    padding: 10px;
+}
+
+.footer p {
+    color: #E5E7EB;
+    font-size: 8px;
+}

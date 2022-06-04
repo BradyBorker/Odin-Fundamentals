@@ -179,11 +179,43 @@ START BODY-THREE
 */
 .body-three{
     display: flex;
-    border: 1px solid red;
     justify-content: center;
+    align-items: center;
 }
 
 .blue-box {
     display: flex;
-    border: 1px solid blue;
+    justify-content: space-around;
+    align-items: center;
+    margin: 90px;
+    background-color: #3882F6;
+    border-radius: 8px;
+    height: 150px;
+    width: 75%;
 }
+
+.blue-box .text {
+    color: white;
+    width: 500px;
+}
+
+.blue-box .text p {
+    margin-top: -20px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.blue-box button {
+    background-color: #3882F6;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 12px;
+    width: 125px;
+    margin-left: -125px;
+}
+/*
+END BODY-THREE
+*/

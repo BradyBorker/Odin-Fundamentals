@@ -20,10 +20,25 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    return null
+    if (playerSelection == 'rock' && computerSelection == 'scissors') {
+        return `You Win! ${playerSelection} beats ${computerSelection}`
+    }else if (playerSelection == 'paper' && computerSelection == 'rock') {
+        return `You Win! ${playerSelection} beats ${computerSelection}`
+    }else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+        return `You Win! ${playerSelection} beats ${computerSelection}`
+    }else {
+        if (playerSelection == computerSelection) {
+            return "It's a tie!"
+        }
+        else {
+            return `You Lose! ${computerSelection} beats ${playerSelection}`
+        }
+    }
 }
 
 const playerSelection = 'rock';
 const computerSelection = computerPlay();
 
-console.log(computerSelection)
+console.log('Computer Selection: ' + computerSelection)
+console.log(playRound(playerSelection, computerSelection))
+

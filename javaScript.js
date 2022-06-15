@@ -21,20 +21,16 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        //return `You Win! ${playerSelection} beats ${computerSelection}`
         return true;
     }else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        //return `You Win! ${playerSelection} beats ${computerSelection}`
         return true;
     }else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        //return `You Win! ${playerSelection} beats ${computerSelection}`
         return true;
     }else {
         if (playerSelection == computerSelection) {
             return "tie";
         }
         else {
-            //return `You Lose! ${computerSelection} beats ${playerSelection}`
             return false;
         }
     }

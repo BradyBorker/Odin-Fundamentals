@@ -21,24 +21,41 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        return `You Win! ${playerSelection} beats ${computerSelection}`
+        //return `You Win! ${playerSelection} beats ${computerSelection}`
+        return true;
     }else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        return `You Win! ${playerSelection} beats ${computerSelection}`
+        //return `You Win! ${playerSelection} beats ${computerSelection}`
+        return true;
     }else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        return `You Win! ${playerSelection} beats ${computerSelection}`
+        //return `You Win! ${playerSelection} beats ${computerSelection}`
+        return true;
     }else {
         if (playerSelection == computerSelection) {
-            return "It's a tie!"
+            return "tie";
         }
         else {
-            return `You Lose! ${computerSelection} beats ${playerSelection}`
+            //return `You Lose! ${computerSelection} beats ${playerSelection}`
+            return false;
         }
     }
 }
 
-const playerSelection = 'rock';
-const computerSelection = computerPlay();
+function game() {    
+    let win, lose, tie = 0;
+    for (let i=0; i<5; i++) {
+        const playerSelection = 'rock';
+        const computerSelection = computerPlay();
+        //console.log(`Round ${i+1} results: ` + playRound(playerSelection, computerSelection))
+        results = playRound(playerSelection, computerSelection)
+        if (results) {
+            console.log(`Round ${i+1} results: ` + `You Win! ${playerSelection} beats ${computerSelection}`)
+        }else if (results == "tie") {
+            console.log(`Round ${i+1} results: ` + 'It is a tie!')
+        }else {
+            console.log(`Round ${i+1} results: ` + `You Lose! ${computerSelection} beats ${playerSelection}`)
+        }
+    }
+    
+}
 
-console.log('Computer Selection: ' + computerSelection)
-console.log(playRound(playerSelection, computerSelection))
-
+game()

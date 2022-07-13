@@ -6,9 +6,41 @@ body {
     flex-direction: column;
 }
 
+/*
+Scoring information
+*/
+.score-container {
+    display: flex;
+    justify-content: center;
+}
+
+.score-card {
+    display: flex;
+    margin: 10px;
+}
+
+.win {
+    margin: 5px;
+    color: green;
+}
+
+.lose {
+    margin: 5px;
+    color: red;
+}
+
+.tie {
+    margin: 5px;
+    color: yellow;
+}
+
+/*
+User information
+*/
 .user-cards {
     display: flex;
     justify-content: space-around;
+    border: 1px solid red;
 }
 
 .user-cards div {

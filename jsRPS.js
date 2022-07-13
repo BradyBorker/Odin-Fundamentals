@@ -52,6 +52,9 @@ function game(playerSelection) {
     }else {
         lose.textContent = (Number(lose.textContent)+1).toString();
     }
+
+    if (win.textContent == "5") alert('YOU WIN!')
+    else if (lose.textContent == "5") alert('YOU LOSE!')
     
 }
 
@@ -66,4 +69,15 @@ userInput.forEach((card) => {
         game(playerSelection)
     })
 
+})
+
+const resetBtn = document.querySelector('.reset-button')
+resetBtn.addEventListener('click', () => {
+    const win = document.querySelector('.win');
+    const lose = document.querySelector('.lose');
+    const tie = document.querySelector('.tie');
+
+    win.textContent = "0"
+    lose.textContent = "0"
+    tie.textContent = "0"
 })

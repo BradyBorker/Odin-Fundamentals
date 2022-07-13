@@ -4,6 +4,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    background-color: #000;
 }
 
 /*
@@ -40,11 +41,20 @@ User information
 .user-cards {
     display: flex;
     justify-content: space-around;
-    border: 1px solid red;
 }
 
 .user-cards div {
     border: 1px solid black;
     padding: 20px;
     border-radius: 25px;
+    user-select: none;
+}
+.reset-container {
+    display: flex;
+}
+.reset-button {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
 }

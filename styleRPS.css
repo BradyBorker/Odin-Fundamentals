@@ -38,11 +38,6 @@ Computer Cards
     justify-content: space-evenly;
 }
 
-/* HORZ flip on hover */
-.computer-cards:hover {
-    transform: rotateY(180deg);
-}
-
 .computer-cards div {
     border: 1px solid #c8362e;
     padding: 20px;
@@ -50,6 +45,15 @@ Computer Cards
     user-select: none;
     color: #c8362e;
     padding: 125px 100px 125px 100px;
+    transition: all 1s;
+}
+
+.computer-choice {
+    transform: scale(1.1);
+    box-shadow: 
+        inset 0 0 50px #fff,
+        inset 20px 0 80px #ff726f,
+        0 0 50px #c8362e;
 }
 /*
 Scoring information

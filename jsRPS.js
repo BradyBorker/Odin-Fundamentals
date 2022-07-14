@@ -46,10 +46,24 @@ function resetGame() {
     tie.textContent = "0"
 }
 
+function checkWin(win, lose) {
+    if (win.textContent == "5") {
+        alert('YOU WIN!');
+        resetGame();
+    }
+    else if (lose.textContent == "5") {
+        alert('YOU LOSE!') 
+        resetGame();
+    }
+}
+
 function game(playerSelection) {    
     
     const computerSelection = computerChoice();
-    results = playRound(playerSelection, computerSelection)
+    results = playRound(playerSelection, computerSelection);
+
+    const computerCard = document.querySelector(`.computer-cards .${computerSelection}`);
+    computerCard.classList.add("computer-choice");
 
     const win = document.querySelector('.win');
     const lose = document.querySelector('.lose');
@@ -63,15 +77,7 @@ function game(playerSelection) {
         lose.textContent = (Number(lose.textContent)+1).toString();
     }
 
-    if (win.textContent == "5") {
-        alert('YOU WIN!');
-        resetGame();
-    }
-    else if (lose.textContent == "5") {
-        alert('YOU LOSE!') 
-        resetGame();
-    }
-    
+    checkWin(win, lose);
 }
 
 // Wait for user click to select rock, paper, or scissor
@@ -86,6 +92,18 @@ userInput.forEach((card) => {
     })
 
 })
+
+// Highlights computer choice 
+function removeTransition(e) {
+    if(e.propertyName != 'transform') return; //skip if not a transform
+    this.classList.remove('computer-choice');
+}
+
+const computerCards = document.querySelectorAll(".computer-cards div");
+computerCards.forEach((card) => {
+    card.addEventListener('transitionend', removeTransition)
+})
+
 
 const resetBtn = document.querySelector('.reset-button')
 resetBtn.addEventListener('click', resetGame);

@@ -81,3 +81,4 @@ resetBtn.addEventListener('click', () => {
     lose.textContent = "0"
     tie.textContent = "0"
 })
+

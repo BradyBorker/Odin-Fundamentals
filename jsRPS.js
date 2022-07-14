@@ -36,6 +36,16 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function resetGame() {
+    const win = document.querySelector('.win');
+    const lose = document.querySelector('.lose');
+    const tie = document.querySelector('.tie');
+
+    win.textContent = "0"
+    lose.textContent = "0"
+    tie.textContent = "0"
+}
+
 function game(playerSelection) {    
     
     const computerSelection = computerChoice();
@@ -53,8 +63,14 @@ function game(playerSelection) {
         lose.textContent = (Number(lose.textContent)+1).toString();
     }
 
-    if (win.textContent == "5") alert('YOU WIN!')
-    else if (lose.textContent == "5") alert('YOU LOSE!')
+    if (win.textContent == "5") {
+        alert('YOU WIN!');
+        resetGame();
+    }
+    else if (lose.textContent == "5") {
+        alert('YOU LOSE!') 
+        resetGame();
+    }
     
 }
 
@@ -72,13 +88,5 @@ userInput.forEach((card) => {
 })
 
 const resetBtn = document.querySelector('.reset-button')
-resetBtn.addEventListener('click', () => {
-    const win = document.querySelector('.win');
-    const lose = document.querySelector('.lose');
-    const tie = document.querySelector('.tie');
-
-    win.textContent = "0"
-    lose.textContent = "0"
-    tie.textContent = "0"
-})
+resetBtn.addEventListener('click', resetGame);
 

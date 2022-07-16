@@ -10,16 +10,21 @@ body {
 
 .container {
     border: 1px solid blue;
-    width: 400px;
-    height: 400px;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: 50%;
     display: flex;
 }
 
 .row {
     border: 1px solid green;
-    flex: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .gridsquare {
     border: 1px solid red;
+    width: 100%;
 }

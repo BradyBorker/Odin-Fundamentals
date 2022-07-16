@@ -14,4 +14,4 @@ function divGen(value) {
         container.appendChild(row);
     }
 }
-divGen(16);
+divGen(28);

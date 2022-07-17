@@ -24,7 +24,6 @@ function divGen(value) {
         }
     })
 })
-
 }
 
 // Grabs value from slider
@@ -41,11 +40,43 @@ slider.addEventListener('input', () => {
     divGen(Number(slider.value));
 })
 
-// Remove children
+// ON or OFF for Grid Lines
+// TODO: FIX THIS!!
+/*
+function gridLines() {
+    const buttons = document.querySelectorAll('button');
+    const row = document.querySelectorAll('.row');
+    const cell = document.querySelectorAll('.gridsquare');
+    buttons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            if (e.target.className == 'button-on') {
+                row.forEach((row) => {
+                    row.style.border = "1px solid black";
+                })
+                cell.forEach((cell) => {
+                    cell.style.border = "1px solid black";
+                })
+            }else if (e.target.className == 'button-off') {
+                row.forEach((row) => {
+                    row.style.border = "1px solid transparent";
+                })
+                cell.forEach((cell) => {
+                    cell.style.border = "1px solid transparent";
+                })
+            }
+        })
+    })
+}
+*/
+
 function clearGrid() {
     const grid = document.querySelector('.grid-container');
     grid.innerHTML = '';
 
 }
+
+
+
+
 
 

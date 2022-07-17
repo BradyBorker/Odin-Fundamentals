@@ -4,15 +4,15 @@ function divGen(value) {
     const container = document.querySelector('.grid-container');
     for (let i=0; i<value; i++) {
         const row = document.createElement('div');
-        row.classList.add("row");
+        row.classList.add('row');
         for (let j=0; j<value; j++) {
-            const cell = document.createElement("div");
+            const cell = document.createElement('div');
             cell.classList.add("gridsquare");
-            //cell.textContent = (i * value) + j;
             row.appendChild(cell)
         }
         container.appendChild(row);
     }
+
     // Function that will give divs clicked and dragged color.
     const cell = document.querySelectorAll('.gridsquare');
     cell.forEach((cell) => {
@@ -23,8 +23,47 @@ function divGen(value) {
             e.target.style.background = 'red';
         }
     })
+
 })
 }
+
+// ON or OFF for Grid Lines
+function checkGridLines(e) {
+    const row = document.querySelectorAll('.row');
+    const cell = document.querySelectorAll('.gridsquare');
+    if (e.target.textContent == 'OFF') {
+        row.forEach((row) => {
+            row.style.border = "1px solid gray";
+        })
+        cell.forEach((cell) => {
+            cell.style.border = "1px solid gray";
+        })
+    }else if (e.target.textContent == 'ON') {
+        row.forEach((row) => {
+            row.style.border = "1px solid transparent";
+        })
+        cell.forEach((cell) => {
+            cell.style.border = "1px solid transparent";
+        })
+    }
+}
+
+function clearGrid() {
+    const grid = document.querySelector('.grid-container');
+    grid.innerHTML = '';
+
+}
+// Grid line toggle Event listener
+const button = document.querySelector('.toggle-button');
+button.addEventListener('mouseup', (e) => {
+    if (e.target.textContent == 'OFF') {
+        e.target.textContent = 'ON';
+        checkGridLines(e);
+    }else if (e.target.textContent == 'ON') {
+        e.target.textContent = 'OFF';
+        checkGridLines(e);
+    }
+})
 
 // Grabs value from slider
 // Prints grid size above slider
@@ -40,40 +79,6 @@ slider.addEventListener('input', () => {
     divGen(Number(slider.value));
 })
 
-// ON or OFF for Grid Lines
-// TODO: FIX THIS!!
-/*
-function gridLines() {
-    const buttons = document.querySelectorAll('button');
-    const row = document.querySelectorAll('.row');
-    const cell = document.querySelectorAll('.gridsquare');
-    buttons.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            if (e.target.className == 'button-on') {
-                row.forEach((row) => {
-                    row.style.border = "1px solid black";
-                })
-                cell.forEach((cell) => {
-                    cell.style.border = "1px solid black";
-                })
-            }else if (e.target.className == 'button-off') {
-                row.forEach((row) => {
-                    row.style.border = "1px solid transparent";
-                })
-                cell.forEach((cell) => {
-                    cell.style.border = "1px solid transparent";
-                })
-            }
-        })
-    })
-}
-*/
-
-function clearGrid() {
-    const grid = document.querySelector('.grid-container');
-    grid.innerHTML = '';
-
-}
 
 
 

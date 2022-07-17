@@ -88,14 +88,49 @@ GRID ON/OFF BUTTONS
     width: 75%;
 }
 
-.button-container {
+.grid-buttons button {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
-
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 5px;
+    height: 50%;
+    width: 30%;
 }
 
+/*
+Color Selection List
+*/
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    list-style: none;
+    width: 35%;
+    padding: 0;
+    
+}
 
+li {
+    width: 15px;
+    height: 15px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
 
 /*
 GRID
@@ -110,15 +145,16 @@ GRID
 }
 
 .row {
-    border: 1px solid transparent;
+    border: 1px solid gray;
     display: flex;
     flex-wrap: wrap;
     
 }
 
 .gridsquare {
-    border: 1px solid transparent;
+    border: 1px solid gray;
     width: 100%;
     user-select: none;
 }
+
 

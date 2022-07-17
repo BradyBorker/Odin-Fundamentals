@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
 }
+
 /*
 Color Selection Menu
 */
@@ -19,6 +20,16 @@ Color Selection Menu
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.slider-value-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 30%;
+    margin-top: 10px;
+    font-size: 30px;
 }
 
 /* 
@@ -63,6 +74,7 @@ Slider
     background: #04AA6D;
     cursor: pointer;
 }
+
 /*
 GRID
 */
@@ -76,14 +88,14 @@ GRID
 }
 
 .row {
-    border: 1px solid transparent;
+    border: 1px solid green;
     display: flex;
     flex-wrap: wrap;
     
 }
 
 .gridsquare {
-    border: 1px solid transparent;
+    border: 1px solid red;
     width: 100%;
     user-select: none;
 }

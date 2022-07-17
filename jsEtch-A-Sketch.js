@@ -13,14 +13,9 @@ function divGen(value) {
         }
         container.appendChild(row);
     }
-}
-// TODO
-// Slider/ User Input for number of divs
-divGen(20);
-
-// Function that will give divs clicked and dragged color.
-const cell = document.querySelectorAll('.gridsquare');
-cell.forEach((cell) => {
+    // Function that will give divs clicked and dragged color.
+    const cell = document.querySelectorAll('.gridsquare');
+    cell.forEach((cell) => {
     cell.addEventListener('mousemove', (e) => {
         if (e.buttons == 1) { // If the mouse is down   
         // TODO:
@@ -30,8 +25,27 @@ cell.forEach((cell) => {
     })
 })
 
-/* slider */
+}
+
+// Grabs value from slider
+// Prints grid size above slider
 const slider = document.querySelector('#myRange');
+const gridSize = document.querySelector('.slider-value-box')
+
+divGen(Number(slider.value));
+gridSize.textContent = slider.value + 'x' + slider.value;
+
 slider.addEventListener('input', () => {
-    console.log(slider.value)
+    gridSize.textContent = `${slider.value}x${slider.value}`
+    clearGrid();
+    divGen(Number(slider.value));
 })
+
+// Remove children
+function clearGrid() {
+    const grid = document.querySelector('.grid-container');
+    grid.innerHTML = '';
+
+}
+
+

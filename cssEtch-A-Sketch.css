@@ -2,29 +2,88 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+/*
+Color Selection Menu
+*/
+.color-selection-menu {
+    width: 20%;
+    height: 65%;
+    border: 2px solid black;
+    border-radius: 15%;
+    margin-right: 25px;
+    box-shadow: 10px 5px 5px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.container {
-    border: 1px solid blue;
+/* 
+Slider
+*/
+.slidecontainer {
+    width: 75%;
+    margin-top: 25px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: gray;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+}
+/*
+GRID
+*/
+.grid-container {
+    border: 1px solid black;
     padding: 0;
     margin: 0;
-    width: 50%;
-    height: 50%;
+    width: 35%;
+    height: 60%;
     display: flex;
 }
 
 .row {
-    border: 1px solid green;
+    border: 1px solid transparent;
     display: flex;
     flex-wrap: wrap;
     
 }
 
 .gridsquare {
-    border: 1px solid red;
+    border: 1px solid transparent;
     width: 100%;
+    user-select: none;
 }

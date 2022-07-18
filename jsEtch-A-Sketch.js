@@ -12,19 +12,21 @@ function divGen(value) {
         }
         container.appendChild(row);
     }
+    
+    let chosenColor = ["red"];
+    chooseColor(chosenColor);
+    colorCells(chosenColor)
+}
 
-    // Function that will give divs clicked and dragged color.
+function colorCells(chosenColor) {
     const cell = document.querySelectorAll('.gridsquare');
     cell.forEach((cell) => {
-    cell.addEventListener('mousemove', (e) => {
-        if (e.buttons == 1) { // If the mouse is down   
-        // TODO:
-        // Grab color from user
-            e.target.style.background = 'red';
-        }
+        cell.addEventListener('mousemove', (e) => {
+            if (e.buttons == 1) {
+                e.target.style.background = `${chosenColor}`;
+            }
+        })
     })
-
-})
 }
 
 // ON or OFF for Grid Lines
@@ -53,6 +55,21 @@ function clearGrid() {
     grid.innerHTML = '';
 
 }
+
+// Get color from user input
+function chooseColor(chosenColor) {
+    const colors = document.querySelectorAll('.colors');
+    colors.forEach((color) => {
+        color.addEventListener('click', (e) => {
+            chosenColor.unshift(e.target.className);
+            chosenColor.pop();
+            console.log(chosenColor[0])
+            return chosenColor[0];
+        })
+    })
+}
+
+
 // Grid line toggle Event listener
 const button = document.querySelector('.toggle-button');
 button.addEventListener('mouseup', (e) => {
@@ -69,7 +86,6 @@ button.addEventListener('mouseup', (e) => {
 // Prints grid size above slider
 const slider = document.querySelector('#myRange');
 const gridSize = document.querySelector('.slider-value-box')
-
 divGen(Number(slider.value));
 gridSize.textContent = slider.value + 'x' + slider.value;
 

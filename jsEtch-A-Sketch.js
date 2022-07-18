@@ -12,20 +12,45 @@ function divGen(value) {
         }
         container.appendChild(row);
     }
-    
+
     let chosenColor = ["red"];
     chooseColor(chosenColor);
     colorCells(chosenColor)
 }
 
+// Color cells based on user chosenColor
 function colorCells(chosenColor) {
     const cell = document.querySelectorAll('.gridsquare');
     cell.forEach((cell) => {
         cell.addEventListener('mousemove', (e) => {
             if (e.buttons == 1) {
-                e.target.style.background = `${chosenColor}`;
+                if (chosenColor == 'rainbow') {
+                    const rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+                    color = rainbow[Math.floor(Math.random() * rainbow.length)];
+                    e.target.style.background = `${color}`;
+                }else {
+                    e.target.style.background = `${chosenColor}`;
+                }
             }
         })
+    })
+}
+
+// Get color from user input
+function chooseColor(chosenColor) {
+    const colors = document.querySelectorAll('.colors');
+    colors.forEach((color) => {
+        color.addEventListener('click', (e) => {
+            chosenColor.unshift(e.target.className);
+            chosenColor.pop();
+            return chosenColor[0];
+        })
+    })
+    const colorPicker = document.querySelector('.color-picker');
+    colorPicker.addEventListener('input', (e) => {
+        chosenColor.unshift(e.target.value);
+        chosenColor.pop();
+        return chosenColor[0];
     })
 }
 
@@ -56,20 +81,6 @@ function clearGrid() {
 
 }
 
-// Get color from user input
-function chooseColor(chosenColor) {
-    const colors = document.querySelectorAll('.colors');
-    colors.forEach((color) => {
-        color.addEventListener('click', (e) => {
-            chosenColor.unshift(e.target.className);
-            chosenColor.pop();
-            console.log(chosenColor[0])
-            return chosenColor[0];
-        })
-    })
-}
-
-
 // Grid line toggle Event listener
 const button = document.querySelector('.toggle-button');
 button.addEventListener('mouseup', (e) => {
@@ -95,8 +106,12 @@ slider.addEventListener('input', () => {
     divGen(Number(slider.value));
 })
 
-
-
+// Add reset button listener
+const resetButton = document.querySelector('.reset-button');
+resetButton.addEventListener('click', () => {
+    clearGrid()
+    divGen(Number(slider.value));
+})
 
 
 

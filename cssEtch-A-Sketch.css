@@ -24,6 +24,7 @@ Color Selection Menu
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .slider-value-box {
@@ -32,7 +33,6 @@ Color Selection Menu
     align-items: center;
     height: 10%;
     width: 30%;
-    margin-top: 10px;
 }
 
 /* 
@@ -84,7 +84,6 @@ GRID ON/OFF BUTTONS
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
     width: 75%;
 }
 
@@ -92,7 +91,6 @@ GRID ON/OFF BUTTONS
     display: flex;
     justify-content: center;
     border-radius: 12px;
-    margin-top: 5px;
     height: 50%;
     width: 30%;
 }
@@ -100,10 +98,6 @@ GRID ON/OFF BUTTONS
 /*
 Color Selection List
 */
-span {
-    margin-top: 20px;
-    margin-bottom: -20px;
-}
 
 ul {
     display: flex;
@@ -116,6 +110,7 @@ ul {
 li {
     width: 20px;
     height: 20px;
+    margin-top: -40px;
 }
 
 .red {
@@ -143,6 +138,20 @@ li {
     border: 1px solid black; 
 }
 
+.color-picker {
+    margin-top: -60px;
+}
+
+/*
+Reset Button
+*/
+.reset-button {
+    border-radius: 12px;
+    width: 25%;
+    height: 10%;
+}
+
+
 /*
 GRID
 */
@@ -158,8 +167,7 @@ GRID
 .row {
     border: 1px solid gray;
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;   
 }
 
 .gridsquare {

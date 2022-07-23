@@ -21,6 +21,14 @@ function operate(num1, num2, operator) {
     else if (operator == '/') return divide(num1,num2)
 }
 
+function resetDisplay(mainDisplay, subDisplay, obj) {
+    mainDisplay.textContent = 0;
+    subDisplay.textContent = '';
+    obj.firstNumber = null;
+    obj.secondNumber = null;
+    obj.operator = null;
+}
+
 obj = {
     firstNumber: null,
     operator: null,
@@ -57,6 +65,16 @@ buttons.forEach(button => {
                 subDisplay.textContent = obj.firstNumber + obj.operator;
             }
             console.log(obj.operator)
-        }    
+        }else if (e.target.className == 'equals') {
+            // Compute
+            const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
+            mainDisplay.textContent = total;
+            subDisplay.textContent = obj.firstNumber + obj.operator + obj.secondNumber + '=';
+            obj.firstNumber = total;
+            obj.operator = null;
+            obj.secondNumber = null;
+        }else if (e.target.className == 'AC') {
+            resetDisplay(mainDisplay, subDisplay, obj)
+        }
     })
 })

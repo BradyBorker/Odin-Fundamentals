@@ -40,7 +40,6 @@ const subDisplay = document.querySelector('.sub-display');
 
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
-        console.log(e.target.className)
         if (e.target.className === 'number') {
             if (!obj.operator) {
                 if (obj.firstNumber === null) obj.firstNumber = e.target.textContent;
@@ -55,16 +54,15 @@ buttons.forEach(button => {
             if (obj.secondNumber) {
                 // Compute
                 const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
+                mainDisplay.textContent = total;
                 obj.firstNumber = total;
-                mainDisplay.textContent = obj.firstNumber;
                 obj.operator = null;
                 obj.secondNumber = null;
             }
-            if (!obj.operator) {
+            if (!obj.operator && obj.firstNumber) {
                 obj.operator = e.target.textContent;
                 subDisplay.textContent = obj.firstNumber + obj.operator;
             }
-            console.log(obj.operator)
         }else if (e.target.className == 'equals') {
             // Compute
             if (obj.secondNumber) {
@@ -74,8 +72,7 @@ buttons.forEach(button => {
                 obj.firstNumber = total;
                 obj.operator = null;
                 obj.secondNumber = null;
-            }
-            
+            }   
         }else if (e.target.className == 'AC') {
             resetDisplay(mainDisplay, subDisplay, obj)
         }

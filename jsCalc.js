@@ -67,12 +67,15 @@ buttons.forEach(button => {
             console.log(obj.operator)
         }else if (e.target.className == 'equals') {
             // Compute
-            const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
-            mainDisplay.textContent = total;
-            subDisplay.textContent = obj.firstNumber + obj.operator + obj.secondNumber + '=';
-            obj.firstNumber = total;
-            obj.operator = null;
-            obj.secondNumber = null;
+            if (obj.secondNumber) {
+                const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
+                mainDisplay.textContent = total;
+                subDisplay.textContent = obj.firstNumber + obj.operator + obj.secondNumber + '=';
+                obj.firstNumber = total;
+                obj.operator = null;
+                obj.secondNumber = null;
+            }
+            
         }else if (e.target.className == 'AC') {
             resetDisplay(mainDisplay, subDisplay, obj)
         }

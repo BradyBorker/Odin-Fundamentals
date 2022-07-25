@@ -21,6 +21,19 @@ function operate(num1, num2, operator) {
     else if (operator == '/') return divide(num1,num2)
 }
 
+function compute(className, obj) {
+    const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
+    if (className == 'operator') {
+        mainDisplay.textContent = total;
+    }else if (className == 'equals') {
+        mainDisplay.textContent = total;
+        subDisplay.textContent = obj.firstNumber + ' ' + obj.operator + ' ' + obj.secondNumber + ' ' + '=';
+    }
+    obj.firstNumber = total;
+    obj.operator = null;
+    obj.secondNumber = null;
+}
+
 function resetDisplay(mainDisplay, subDisplay, obj) {
     mainDisplay.textContent = 0;
     subDisplay.textContent = '';
@@ -34,6 +47,7 @@ obj = {
     operator: null,
     secondNumber: null
 }
+
 const buttons = document.querySelectorAll("button");
 const mainDisplay = document.querySelector('.main-display');
 const subDisplay = document.querySelector('.sub-display');
@@ -52,26 +66,15 @@ buttons.forEach(button => {
             }
         }else if (e.target.className === 'operator') {
             if (obj.secondNumber) {
-                // Compute
-                const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
-                mainDisplay.textContent = total;
-                obj.firstNumber = total;
-                obj.operator = null;
-                obj.secondNumber = null;
+                compute(e.target.className, obj)
             }
             if (!obj.operator && obj.firstNumber) {
                 obj.operator = e.target.textContent;
-                subDisplay.textContent = obj.firstNumber + obj.operator;
+                subDisplay.textContent = obj.firstNumber + ' ' +  obj.operator;
             }
         }else if (e.target.className == 'equals') {
-            // Compute
             if (obj.secondNumber) {
-                const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
-                mainDisplay.textContent = total;
-                subDisplay.textContent = obj.firstNumber + obj.operator + obj.secondNumber + '=';
-                obj.firstNumber = total;
-                obj.operator = null;
-                obj.secondNumber = null;
+                compute(e.target.className, obj)
             }   
         }else if (e.target.className == 'AC') {
             resetDisplay(mainDisplay, subDisplay, obj)

@@ -14,7 +14,7 @@ function divide(num1, num2) {
     return num1 / num2;
 }
 
-function operate(num1, num2, operator) {
+function checkOperator(num1, num2, operator) {
     if (operator == '+') return add(num1,num2)
     else if (operator == '-') return subtract(num1,num2)
     else if (operator == '*') return multiply(num1,num2)
@@ -22,7 +22,7 @@ function operate(num1, num2, operator) {
 }
 
 function compute(className, obj) {
-    const total = operate(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
+    const total = checkOperator(Number(obj.firstNumber), Number(obj.secondNumber), obj.operator)
     if (className == 'operator') {
         mainDisplay.textContent = total;
     }else if (className == 'equals') {

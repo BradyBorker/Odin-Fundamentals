@@ -14,18 +14,20 @@ body {
     width: 400px;
     border: 1px solid black;
     border-radius: 12px;
+    background-color: rgb(192,192,192);
 }
 
 .display {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     width: 60%;
     min-height: 15%;
     height: fit-content;
     border: 1px solid black;
     border-radius: 12px;
     padding: 10px;
+    background-color: gainsboro;
 }
 
 .main-display {
@@ -33,22 +35,23 @@ body {
     display: flex;
     justify-content: end;
     word-break: break-all;
+    font-size: 30px;
 }
 
 .sub-display {
     width: 100%;
     display: flex;
     justify-content: end;
-    font-size: small;
+    font-size: 20px;
+    word-break: break-all;
 }
 
 .container {
-    border: 1px solid red;
     width: 60%;
+    margin-top: -50px;
 }
 
 .header-buttons {
-    border: 1px solid blue;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -59,10 +62,17 @@ body {
     margin: 5px;
 }
 
+.AC {
+    background-color: coral;
+}
+
+.delete {
+    background-color: cyan;
+}
+
 .number-buttons {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid fuchsia;
 }
 
 .number-buttons button {
@@ -71,5 +81,6 @@ body {
     margin: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: gainsboro;
 }
 

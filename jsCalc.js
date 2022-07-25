@@ -42,6 +42,17 @@ function resetDisplay(mainDisplay, subDisplay, obj) {
     obj.operator = null;
 }
 
+function deleteNumber(mainDisplay, obj) {
+    let update = mainDisplay.textContent.split('');
+    update.pop()
+    if (!obj.operator) {
+        obj.firstNumber = update.join('')
+    }else if (obj.operator) {
+        obj.secondNumber = update.join('')
+    }
+    return update.join('');
+}
+
 obj = {
     firstNumber: null,
     operator: null,
@@ -78,6 +89,8 @@ buttons.forEach(button => {
             }   
         }else if (e.target.className == 'AC') {
             resetDisplay(mainDisplay, subDisplay, obj)
+        }else if (e.target.className == 'delete') {
+            mainDisplay.textContent = deleteNumber(mainDisplay, obj);
         }
     })
 })

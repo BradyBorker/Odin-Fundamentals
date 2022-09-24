@@ -1,0 +1,15 @@
+h1, h2, h3 {
+    text-align: center;
+    background-color: bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul li {
+    background-color: #ffcba4;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ol li {
+    background-color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

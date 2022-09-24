@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Odin-Fundamentals
 =======
 # git_test
@@ -57,3 +58,6 @@ Landing Page project for The Odin Project
 =======
 # Etch-A-Sketch
 >>>>>>> Etch-A-Sketch/main
+=======
+# Calculator
+>>>>>>> Calculator/main

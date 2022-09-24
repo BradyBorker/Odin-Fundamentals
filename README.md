@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Odin-Fundamentals
 =======
 # git_test
@@ -49,3 +50,6 @@ If you have a suggestion to improve an exercise, an idea for a new exercise, or 
 # landing-page
 Landing Page project for The Odin Project
 >>>>>>> landing-page/main
+=======
+# rockPaperScissors
+>>>>>>> rockPaperScissors/main

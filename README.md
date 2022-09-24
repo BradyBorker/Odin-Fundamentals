@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Odin-Fundamentals
 =======
 # git_test
@@ -53,3 +54,6 @@ Landing Page project for The Odin Project
 =======
 # rockPaperScissors
 >>>>>>> rockPaperScissors/main
+=======
+# Etch-A-Sketch
+>>>>>>> Etch-A-Sketch/main

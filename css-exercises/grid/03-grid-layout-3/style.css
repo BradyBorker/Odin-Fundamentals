@@ -4,7 +4,12 @@
 }
 
 .container {
+  height: 100vh;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 5px;
 }
 
 .container div {
@@ -17,6 +22,8 @@
 
 .header {
   background-color: #393f4d;
+  grid-row: 1;
+  grid-column: 1 / span 2;
 }
 
 .logo {
@@ -26,6 +33,7 @@
 }
 
 .menu ul {
+  list-style-type: none;
 }
 
 .menu ul,
@@ -35,6 +43,8 @@
 
 .sidebar {
   background-color: #FF7755;
+  grid-column: 1;
+  grid-row: 2 / span 2;
 }
 
 .sidebar .photo {
@@ -60,6 +70,7 @@
 }
 
 .nav ul {
+  list-style-type: none;
 }
 
 .nav ul li {
@@ -97,6 +108,8 @@
 
 .footer {
   background-color: #393f4d;
+  grid-row: 4;
+  grid-column: 1 / -1;
 }
 
 .footer p {
